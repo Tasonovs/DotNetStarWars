@@ -2,6 +2,16 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetStarWars", "DotNetStarWars\DotNetStarWars.csproj", "{0CC6C2BC-52EB-49DF-BBF0-327CB4963EFA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetStarWars.Application", "DotNetStarWars.Application\DotNetStarWars.Application.csproj", "{1702FC6A-7576-418A-9F95-36D46EA6E0C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6B99E146-4493-42A2-B1BB-CBD82D0A4B12}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F1579C5D-B4BA-439D-939D-EBD108A1D8A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetStarWars.Domain", "DotNetStarWars.Domain\DotNetStarWars.Domain.csproj", "{414AF5D0-4288-4010-9445-A839D58AFE4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetStarWars.Infrastructure.Database", "DotNetStarWars.Infrastructure.Database\DotNetStarWars.Infrastructure.Database.csproj", "{1F7BE032-46B7-4E79-8E03-6206AA9DE5C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +22,23 @@ Global
 		{0CC6C2BC-52EB-49DF-BBF0-327CB4963EFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CC6C2BC-52EB-49DF-BBF0-327CB4963EFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CC6C2BC-52EB-49DF-BBF0-327CB4963EFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1702FC6A-7576-418A-9F95-36D46EA6E0C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1702FC6A-7576-418A-9F95-36D46EA6E0C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1702FC6A-7576-418A-9F95-36D46EA6E0C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1702FC6A-7576-418A-9F95-36D46EA6E0C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{414AF5D0-4288-4010-9445-A839D58AFE4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{414AF5D0-4288-4010-9445-A839D58AFE4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{414AF5D0-4288-4010-9445-A839D58AFE4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{414AF5D0-4288-4010-9445-A839D58AFE4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F7BE032-46B7-4E79-8E03-6206AA9DE5C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F7BE032-46B7-4E79-8E03-6206AA9DE5C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F7BE032-46B7-4E79-8E03-6206AA9DE5C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F7BE032-46B7-4E79-8E03-6206AA9DE5C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0CC6C2BC-52EB-49DF-BBF0-327CB4963EFA} = {6B99E146-4493-42A2-B1BB-CBD82D0A4B12}
+		{1702FC6A-7576-418A-9F95-36D46EA6E0C9} = {6B99E146-4493-42A2-B1BB-CBD82D0A4B12}
+		{414AF5D0-4288-4010-9445-A839D58AFE4D} = {6B99E146-4493-42A2-B1BB-CBD82D0A4B12}
+		{1F7BE032-46B7-4E79-8E03-6206AA9DE5C8} = {6B99E146-4493-42A2-B1BB-CBD82D0A4B12}
 	EndGlobalSection
 EndGlobal
