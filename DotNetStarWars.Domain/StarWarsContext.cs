@@ -15,8 +15,7 @@ public class StarWarsContext : DbContext
 
     public override int SaveChanges()
     {
-        ChangeTracker.DetectChanges();
-
+        // ChangeTracker.DetectChanges();
         // update JSON file .GetAwaiter().GetResult();
 
         return base.SaveChanges();
@@ -24,11 +23,9 @@ public class StarWarsContext : DbContext
 
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new())
     {
-        ChangeTracker.DetectChanges();
-
-        // update JSON file 
+        // ChangeTracker.DetectChanges();
+        // update JSON file, get file path from _configuration
 
         return await base.SaveChangesAsync(cancellationToken);
     }
-
 }

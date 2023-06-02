@@ -7,13 +7,16 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.1" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.5" />
+        <PackageReference Include="Refit.HttpClientFactory" Version="6.3.2" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\DotNetStarWars.Application\DotNetStarWars.Application.csproj" />
+      <ProjectReference Include="..\DotNetStarWars.Infrastructure.Database\DotNetStarWars.Infrastructure.Database.csproj" />
     </ItemGroup>
 
 </Project>

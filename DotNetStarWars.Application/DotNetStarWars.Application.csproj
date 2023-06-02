@@ -7,13 +7,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="ApiClients" />
-      <Folder Include="Commands" />
-      <Folder Include="Queries" />
+      <ProjectReference Include="..\DotNetStarWars.Domain\DotNetStarWars.Domain.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\DotNetStarWars.Domain\DotNetStarWars.Domain.csproj" />
+      <PackageReference Include="MediatR" Version="11.1.0" />
+      <PackageReference Include="Refit" Version="6.3.2" />
     </ItemGroup>
 
 </Project>

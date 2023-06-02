@@ -1,5 +1,8 @@
+using DotNetStarWars.Application.ApiClients;
 using DotNetStarWars.Domain;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Refit;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,10 +15,24 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+var currentDomainAssemblies = AppDomain.CurrentDomain.GetAssemblies();
+builder.Services.AddMediatR(currentDomainAssemblies);
+builder.Services
+    .AddRefitClient<ISwapiApiClient>()
+    .ConfigureHttpClient(client =>
+    {
+        client.BaseAddress = new Uri("https://swapi.dev");
+    });
+
+
 var app = builder.Build();
 ApplyMigrations(app);
 
 // Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
 
 app.UseStaticFiles();
 app.UseRouting();
