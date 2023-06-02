@@ -29,33 +29,25 @@ Follow these steps to get started:
 1. Clone the repository:
     
     ```
-    bashCopy code
     git clone https://github.com/Tasonovs/DotNetStarWars.git
-    
     ```
     
 2. Navigate to the project directory:
     
     ```
-    bashCopy code
     cd DotNetStarWars
-    
     ```
     
 3. Build the project:
     
     ```
-    Copy code
     dotnet build
-    
     ```
     
 4. Run the application:
     
     ```
-    arduinoCopy code
     dotnet run
-    
     ```
     
     The application will start and be accessible at **`http://localhost:5244`** (and **`http://localhost:5244/swagger`** for API documentation).
