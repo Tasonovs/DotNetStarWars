@@ -5,5 +5,5 @@ namespace DotNetStarWars.Application.Queries.Characters.GetAllCharacters;
 
 public class GetAllCharactersRequest : IRequest<SwapiGetListResponse<SwapiCharacterDto>>
 {
-    public int Page { get; set; } = 1;
+    public int Page { get; set; }
 }

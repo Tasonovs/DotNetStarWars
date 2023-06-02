@@ -1,10 +1,14 @@
 ﻿using System.Text.Json.Serialization;
+using System.Text.RegularExpressions;
+
 #pragma warning disable CS8618
 
 namespace DotNetStarWars.Application.ApiClients.Models;
 
 public class SwapiCharacterDto
 {
+    public string Id => Regex.Match(Url, @"/(\d+)/").Groups[1].Value;
+
     [JsonPropertyName("birth_year")]
     public string BirthYear { get; set; }
 

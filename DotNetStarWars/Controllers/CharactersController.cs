@@ -1,4 +1,5 @@
 using DotNetStarWars.Application.ApiClients.Models;
+using DotNetStarWars.Application.Commands.Characters.SyncCharacterById;
 using DotNetStarWars.Application.Commands.Characters.SyncCharactersToFile;
 using DotNetStarWars.Application.Queries.Characters.GetAllCharacters;
 using MediatR;
@@ -18,8 +19,12 @@ public class CharactersController : ControllerBase
     }
 
     [HttpGet]
-    public Task<SwapiGetListResponse<SwapiCharacterDto>> GetList([FromQuery] int page) =>
+    public Task<SwapiGetListResponse<SwapiCharacterDto>> GetList([FromQuery] int page = 1) =>
         _mediator.Send(new GetAllCharactersRequest { Page = page });
+
+    [HttpPut("{id}")]
+    public Task<Unit> SyncCharacterById([FromRoute] int id) =>
+        _mediator.Send(new SyncCharacterByIdRequest { Id = id });
 
     [HttpPut("sync-to-file")]
     public Task<Unit> SyncCharactersToFileRequest() =>
